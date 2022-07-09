@@ -1,0 +1,65 @@
+.navbar {
+    top: 0px;
+    height: 76px;
+    position: sticky;
+    background: transparent;
+}
+
+.navbarBackdrop {
+    backdrop-filter: saturate(180%) blur(10px);
+    box-shadow: rgb(2 1 1 / 10%) 0px 5px 20px -5px;
+    background: var(--nextui-colors-headerBackground);
+
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.navbarElementsContainer {
+    padding-left: calc(2 * var(--nextui-space-sm));
+    padding-right: calc(2 * var(--nextui-space-sm));
+    max-width: var(--nextui-breakpoints-lg);
+    align-items: center;
+    flex-wrap: nowrap;
+    display: flex;
+
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.navbarLogoContainer {
+    width: 100%;
+    margin-left: 0%;
+    float: left;
+    box-sizing: border-box;
+    padding-left: calc(var(--nextui--rowGap) / 2);
+    padding-right: calc(var(--nextui--rowGap) / 2);
+}
+
+.navbarLogoContainer > div {
+    flex-wrap: nowrap;
+    --nextui--rowGap: calc(0 * var(--nextui-space-lg));
+    margin-left: calc(0 * var(--nextui-space-lg) / 2);
+    margin-right: calc(0 * var(--nextui-space-lg) / 2);
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    display: flex;
+    position: relative;
+    box-sizing: border-box;
+}
+
+.navbarLogoContainer > div > a{
+    transition: var(--nextui-transitions-link);
+    color: var(--nextui-colors-link);
+    display: inline-flex;
+    align-items: baseline;
+    line-height: inherit;
+    text-decoration: none;
+    background-image: inherit;
+    background-color: inherit;
+    background-clip: inherit;
+    -webkit-text-fill-color: inherit;
+}
