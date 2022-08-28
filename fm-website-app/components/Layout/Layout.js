@@ -1,4 +1,4 @@
-import NavBar from '../Navbar/Navbar'
+import NavBar from '../Navbar/FunctionalMovementNavbar'
 
 const Layout = ({ children }) => {
     return(
