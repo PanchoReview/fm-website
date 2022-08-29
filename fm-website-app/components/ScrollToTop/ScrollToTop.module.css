@@ -1,0 +1,21 @@
+.scrollToTopContainer {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+}
+
+.scrollToTopBtn {
+    justify-content: center;
+}
+
+.scrollToTopBtn.show {
+    opacity: 100;
+}
+
+.scrollToTopBtn.hide {
+    opacity: 0;    
+}
+
+.scrollToTopBtn .icon {
+    position: static;
+}
