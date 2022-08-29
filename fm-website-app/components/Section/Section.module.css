@@ -1,0 +1,12 @@
+.fmSection {
+    height: 80vh;
+    margin: 20px 0 20px 0;
+}
+
+.fmSection .fmTextContainer {
+    text-align: center;
+}
+
+.fmSection .fmTextContainer button {
+    margin: auto;
+}

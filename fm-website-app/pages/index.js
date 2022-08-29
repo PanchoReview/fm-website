@@ -1,6 +1,4 @@
-import Head from 'next/head';
-import Image from 'next/image';
-import styles from '../styles/Home.module.css';
+import Section from '../components/Section/Section';
 
 import {
   Container,
@@ -15,45 +13,30 @@ import {
 export default function Home() {
   const { isDark } = useTheme()
 
-  return (
-    <div className={styles.container}>
-      <Head>
-        <title>Functional Movement</title>
-        <meta
-          name="description"
-          content="Functional Movement"
+  return (    
+    <Container>
+      <Section title="Functional Movement"
+        text="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
+        image={{ src: isDark ? "Isotipo-blanco.svg" : "Isotipo-negro.svg", alt: 'Functional Movement Logo' }}
+        action={{ text: "Check it out", goto: "", props: { shadow: true, color: "primary" } }}                
         />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-
-      <Container
-        as="main"
-        display="flex"
-        direction="column"
-        justify="center"
-        alignItems="center"
-        style={{ height: '100vh' }}
-      >
-        <Spacer />
-        <Image src={isDark ? "Isotipo-blanco.svg" : "Isotipo-negro.svg"} alt="Functional Movement logo" width={200} height={200} />
-        <Spacer />
-        <Text h1 className={styles.title} >
-          Welcome to Functional Movement &nbsp;          
-        </Text>
-        <Spacer />
-        <Input clearable labelPlaceholder="Type something" />
-        <Spacer />
-        <Button>
-          <a
-            className={styles.button}
-            href="https://github.com/nextui-org/nextui"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Show on Github
-          </a>
-        </Button>
-      </Container>
-    </div>
+        <Section title="Functional Movement"
+        text="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
+        image={{ src: "example1.png", alt: 'Functional Movement Logo' } }
+        action={{ text: "Check it out", goto: "", props: { shadow: true, color: "primary" } }}        
+        direction="row-reverse"
+        />
+        <Section title="Functional Movement"
+        text="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
+        image={{ src: "example2.png", alt: 'Functional Movement Logo' } }
+        action={{ text: "Check it out", goto: "", props: { shadow: true, color: "primary" } }}                
+        />
+        <Section title="Functional Movement"
+        text="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
+        image={{ src: "example3.png", alt: 'Functional Movement Logo' } }
+        action={{ text: "Check it out", goto: "", props: { shadow: true, color: "primary" } }}        
+        direction="row-reverse"
+        />
+    </Container>
   );
 }

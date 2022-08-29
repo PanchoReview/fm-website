@@ -1,9 +1,9 @@
-import NavBar from '../Navbar/FunctionalMovementNavbar'
+import FunctionalMovementNavbar from '../Navbar/FunctionalMovementNavbar'
 
 const Layout = ({ children }) => {
     return(
         <>
-            <NavBar />
+            <FunctionalMovementNavbar />
             {children}
         </>
     )
