@@ -1,5 +1,5 @@
 .fmSection {
-    height: 80vh;
+    min-height: 80vh;
     margin: 20px 0 20px 0;
 }
 
@@ -9,4 +9,8 @@
 
 .fmSection .fmTextContainer button {
     margin: auto;
+}
+
+.fmSectionInner {
+    margin: 20px 0;
 }
