@@ -1,33 +1,8 @@
-.navbar {
-    top: 0px;
-    height: 76px;
-    position: sticky;
-    background: transparent;
+#fmNavbar > div {
+    max-width: 100%;
 }
 
-.navbarBackdrop {
-    backdrop-filter: saturate(180%) blur(10px);
-    box-shadow: rgb(2 1 1 / 10%) 0px 5px 20px -5px;
-    background: var(--nextui-colors-headerBackground);
-
-    display: flex;
-    align-items: center;
-    width: 100%;
-    height: 100%;
-}
-
-.navbarElementsContainer {
-    padding-left: calc(2 * var(--nextui-space-sm));
-    padding-right: calc(2 * var(--nextui-space-sm));
-    max-width: var(--nextui-breakpoints-lg);
-    align-items: center;
-    flex-wrap: nowrap;
-    display: flex;
-
-    width: 100%;
-    margin-right: auto;
-    margin-left: auto;
-}
+/*Logo container*/
 
 .navbarLogoContainer {
     width: 100%;

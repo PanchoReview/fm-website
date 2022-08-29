@@ -1,4 +1,4 @@
-import styles from "./Navbar.module.css";
+import styles from "./FunctionalMovementNavbar.module.css";
 import { Image, Link } from '@nextui-org/react'
 
 const NavbarLogo = ({logo}) => {
