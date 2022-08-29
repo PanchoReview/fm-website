@@ -17,10 +17,12 @@ const ScrollToTop = () => {
     }
 
     const scrollToTop = () => {
-        window.scrollTo({
-            top: 0,
-            behavior: "smooth"
-        })
+        if (isVisible) {
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            })
+        }        
     }
 
     useEffect(() => {
@@ -33,7 +35,7 @@ const ScrollToTop = () => {
 
     return(
         <div className={styles.scrollToTopContainer}>
-            <Button rounded auto disabled={!isVisible}
+            <Button rounded auto
                 icon={<ChevronUp set="bold" filled className={styles.icon} />} 
                 onClick={scrollToTop}
                 className={classNames(isVisible ? styles.show : styles.hide, styles.scrollToTopBtn)} />            

@@ -5,7 +5,7 @@
 }
 
 .scrollToTopBtn {
-    justify-content: center;
+    justify-content: center;    
 }
 
 .scrollToTopBtn.show {
@@ -14,6 +14,7 @@
 
 .scrollToTopBtn.hide {
     opacity: 0;    
+    cursor: default;
 }
 
 .scrollToTopBtn .icon {
