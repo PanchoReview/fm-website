@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react"
-import { ChevronUp } from "react-iconly"
 import { Button } from "@nextui-org/react"
-import classNames from "../../utils/classNames"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { faArrowUp } from "@fortawesome/free-solid-svg-icons"
+import classNames from "@utils/classNames"
 import styles from "./ScrollToTop.module.css"
 
 const ScrollToTop = () => {
@@ -36,7 +37,7 @@ const ScrollToTop = () => {
     return(
         <div className={styles.scrollToTopContainer}>
             <Button rounded auto
-                icon={<ChevronUp set="bold" filled className={styles.icon} />} 
+                icon={<FontAwesomeIcon icon={faArrowUp} className={styles.icon} />} 
                 onClick={scrollToTop}
                 className={classNames(isVisible ? styles.show : styles.hide, styles.scrollToTopBtn)} />            
         </div>

@@ -1,4 +1,4 @@
-import { useTheme, Navbar, Text, Button, Link } from "@nextui-org/react";
+import { useTheme, Navbar, Text } from "@nextui-org/react";
 import NavbarLogo from "./NavbarLogo";
 import NavbarThemeSwitch from "./NavbarThemeSwitch";
 import styles from './FunctionalMovementNavbar.module.css'

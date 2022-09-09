@@ -1,7 +1,5 @@
 import {
-  Container,
-  Row,
-  Col,
+  Container,  
   Text,
   Image,
   Grid,
