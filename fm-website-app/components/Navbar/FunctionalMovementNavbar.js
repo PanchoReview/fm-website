@@ -1,26 +1,42 @@
-import { useTheme, Navbar, Text } from "@nextui-org/react";
-import NavbarLogo from "./NavbarLogo";
+import Link from 'next/link'
+import { useRouter } from 'next/router'
+import { useTheme, Navbar, Text, Image, Link as NextUiLink } from "@nextui-org/react";
 import NavbarThemeSwitch from "./NavbarThemeSwitch";
 import styles from './FunctionalMovementNavbar.module.css'
 
-const FunctionalMovementNavbar = () => {
+const isActiveLink = (href) => {
+  const router = useRouter()
+  return router.asPath === href  
+}
+
+const routes = [
+  { title: "Home", href: "/" },
+  { title: "Quiénes somos", href: "/about/" },
+  { title: "Contacto", href: "/contact/" },
+]
+
+const FunctionalMovementNavbar = () => {  
   const { isDark, type } = useTheme();
-  const logo = isDark ? "Isotipo-blanco.svg" : "Isotipo-negro.svg";
+  const logo = isDark ? "/Isotipo-blanco.svg" : "/Isotipo-negro.svg";
 
   return (
     <Navbar isBordered={isDark} variant="sticky" id={styles.fmNavbar}>
       <Navbar.Brand>
-        <NavbarLogo logo={logo} />
-        <Text b color="inherit" hideIn="xs">
-          Functional Movement
-        </Text>
+        <Link href="/">
+          <NextUiLink color="inherit">
+            <Image src={logo} width={100} height={24.48} />    
+            <Text b color="inherit" hideIn="xs">
+              Functional Movement
+            </Text>  
+          </NextUiLink>
+        </Link>    
       </Navbar.Brand>
       <Navbar.Content>
-        <Navbar.Link isActive href="#">Home</Navbar.Link>
-        <Navbar.Link href="#">
-          Quiénes somos
-        </Navbar.Link>
-        <Navbar.Link href="#">Contacto</Navbar.Link>        
+        {routes.map(route => 
+          <Link href={route.href} key={route.title}>
+            <Navbar.Link isActive={isActiveLink(route.href)}>{route.title}</Navbar.Link>
+          </Link>     
+        )}
       </Navbar.Content>
       <Navbar.Content>
         <Navbar.Item>
