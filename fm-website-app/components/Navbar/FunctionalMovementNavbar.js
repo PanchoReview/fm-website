@@ -4,10 +4,7 @@ import { useTheme, Navbar, Text, Image, Link as NextUiLink } from "@nextui-org/r
 import NavbarThemeSwitch from "./NavbarThemeSwitch";
 import styles from './FunctionalMovementNavbar.module.css'
 
-const isActiveLink = (href) => {
-  const router = useRouter()
-  return router.asPath === href  
-}
+const isActiveLink = (currentPath, href) => currentPath === href  
 
 const routes = [
   { title: "Home", href: "/" },
@@ -16,6 +13,7 @@ const routes = [
 ]
 
 const FunctionalMovementNavbar = () => {  
+  const router = useRouter()
   const { isDark, type } = useTheme();
   const logo = isDark ? "/Isotipo-blanco.svg" : "/Isotipo-negro.svg";
 
@@ -34,7 +32,7 @@ const FunctionalMovementNavbar = () => {
       <Navbar.Content>
         {routes.map(route => 
           <Link href={route.href} key={route.title}>
-            <Navbar.Link isActive={isActiveLink(route.href)}>{route.title}</Navbar.Link>
+            <Navbar.Link isActive={isActiveLink(router.asPath, route.href)}>{route.title}</Navbar.Link>
           </Link>     
         )}
       </Navbar.Content>
