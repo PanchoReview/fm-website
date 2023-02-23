@@ -8,14 +8,14 @@ import {
 } from "@nextui-org/react";
 import styles from "./Section.module.css";
 
-const Section = ({ title, text, image, action, direction = "row", renderSeparator = false }) => {
+const Section = ({ title, paragraphs, image, action, direction = "row", renderSeparator = false }) => {
   return (
     <>
     <Grid.Container direction={direction} className={styles.fmSection} alignItems="center">
       <Grid xs={12} sm={12} md={6} xl={6} className={styles.fmSectionInner}>
         <Container display="block" alignItems="center" className={styles.fmTextContainer}>
             <Text h1>{title}</Text>
-            <Text>{text}</Text>
+            {paragraphs.map((text, index) => <Text key={index}>{text}</Text>)}            
             <Spacer></Spacer>
             {action && <Button {...action.props}>{action.text}</Button>}
         </Container>        

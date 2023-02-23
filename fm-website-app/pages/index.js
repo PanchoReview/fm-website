@@ -12,30 +12,22 @@ export default function Home() {
       </Head>
       <Container>
         <Section title="Functional Movement"
-          text="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
-          image={{ src: isDark ? "Isotipo-blanco.svg" : "Isotipo-negro.svg", alt: 'Functional Movement Logo' }}
-          action={{ text: "Check it out", goto: "", props: { shadow: true, color: "primary" } }}    
+          paragraphs={[ "Somos Functional Movement y queremos acompañarte en un viaje hacia una vida mejor.", "Sabemos que cada persona es un mundo, cada quien tiene sus objetivos y busca mejorar su          condición física o su calidad de vida. Nosotros te guiamos en tu proceso, no sólo a través de          pautas que seguir, sino que te ayudaremos a cambiar la visión de tu vida, generando el conocimiento y los hábitos que requieres para cumplir tus metas" ]}          
+          image={{ src: isDark ? "Isotipo-blanco.svg" : "Isotipo-negro.svg", alt: 'Functional Movement Logo' }}          
           renderSeparator={true}            
           />        
-          <Section title="Functional Movement"
-          text="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
-          image={{ src: "example1.png", alt: 'Functional Movement Logo' } }
-          action={{ text: "Check it out", goto: "", props: { shadow: true, color: "primary" } }}        
+          <Section title="Suena bien, ¿no?"
+          paragraphs={[ "Ahora, en concreto. Cada sesión de entrenamiento estará diseñada considerando tu realidad, tus lesiones, enfermedades y el entorno en el que te desenvuelves, desde una perspectiva científica acuciosa para que puedas sacarle el mayor provecho." ]}
+          image={{ src: "example1.png", alt: 'Functional Movement Logo' } }          
           direction="row-reverse"
           renderSeparator={true}
           />        
-          <Section title="Functional Movement"
-          text="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
-          image={{ src: "example2.png", alt: 'Functional Movement Logo' } }
-          action={{ text: "Check it out", goto: "", props: { shadow: true, color: "primary" } }}    
+          <Section title="¿Ya dominas esto?, ¿eres deportista y quieres llegar más allá?"
+          paragraphs={["En Functional Movement evaluaremos la biomecánica de tus patrones de movimiento con el fin de poder detectar posibles riesgos de lesiones, junto con mejorar tu performance deportiva para llevarla al siguiente nivel. Desde el fútbol, hasta las artes marciales mixtas o incluso, si tu meta es escalar el Everest, juntos podemos lograrlo.", 
+            "Ahora, si tu objetivo se centra en el fitness, tomamos estas mismas herramientas y las aplicamos a una concepción estética, logrando de manera saludable una reducción del tejido adiposo y/o aumento de la masa muscular, que te permita verte como quieres sin culpas y sin dietas extremas"]}
+          image={{ src: "example2.png", alt: 'Functional Movement Logo' } }          
           renderSeparator={true}            
           />        
-          <Section title="Functional Movement"
-          text="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
-          image={{ src: "example3.png", alt: 'Functional Movement Logo' } }
-          action={{ text: "Check it out", goto: "", props: { shadow: true, color: "primary" } }}        
-          direction="row-reverse"
-          />
     </Container>
     </>     
   );
